@@ -1,6 +1,8 @@
 :root {
   --color-dark: #37393D;
+  /*rgba(55, 57, 61, 0.85) */
   --color-main: #E9A685;
+  /*rgba(233,166,133, 0.85)*/
   --color-light: #fff;
 }
 
@@ -18,36 +20,108 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh repeat(4, min-content);
+  grid-template-rows: 100vh repeat(4, min-content);
   grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(1rem, 1fr) [full-end];
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
+  /* grid-row-gap: 10px; */
+  /* grid-column-gap: 10px; */
+  /* align-items: center; */
 }
 
 .header {
   background-color: var(--color-dark);
+  background-image: url(../images/img3.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   grid-column: full-start /full-end;
+  position: relative;
 }
 
-h1 {
+.border-box {
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 60%;
+  /* border: 10px solid var(--color-main); */
+  /* outline: 15px solid var(--color-light); */
+  /* outline-offset: 1rem; */
+  transform: translate(-50%, -50%);
+  animation: fadeIn 5s ease-in;
+}
+
+.heading-border-box-1 {
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 60%;
+  border: 10px solid var(--color-main);
+  transform: translate(-50%, -50%);
+  animation: fadeIn 2s ease-in;
+}
+
+.heading-border-box-2 {
+  background-color: transparent;
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  width: 80%;
+  height: 60%;
+  border: 10px solid var(--color-light);
+  transform: translate(-50%, -50%);
+  animation: fadeIn 5s ease-in;
+}
+
+.heading-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 5rem;
+  text-align: right;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  /*to prevent shakiness when animating heading */
+  backface-visibility: hidden;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.heading-primary-main {
   color: var(--color-main);
-  font-family: 'Montserrat Alternates';
+  display: block;
+  font-size: 6rem;
+  font-weight: 600;
+  white-space: nowrap;
+  /* letter-spacing: 2.8rem; */
+  animation: moveInLeft 1.5s ease-out;
 }
 
-h2 {
+.heading-primary-sub {
   color: var(--color-light);
+  display: block;
+  font-size: 2rem;
+  /* font-weight: 700; */
+  /* letter-spacing: 1.4rem; */
+  animation: moveInRight 1.5s ease-out;
 }
 
 .about__header {
   background-color: var(--color-main);
   color: var(--color-light);
-  grid-column: center-start / col-end 3;
+  grid-column: full-start / col-end 3;
+  text-align: center;
 }
 
 .about__content {
   background-color: var(--color-main);
   color: var(--color-light);
-  grid-column: col-start 4 / center-end;
+  grid-column: col-start 4 / full-end;
+  padding: 5rem;
+  /* text-align: center; */
 }
 
 .projects {
@@ -66,4 +140,76 @@ h2 {
   background-color: var(--color-dark);
   color: var(--color-light);
   grid-column: full-start /full-end;
+}
+
+#copyright{
+  padding: 2rem;
+}
+
+/** animations **/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/** media queries **/
+@media (max-width: 900px) {
+  .header {
+    background-color: var(--color-dark);
+    background-image: linear-gradient(rgba(55, 57, 61, 0.5), rgba(55, 57, 61, 0.5)), url(../images/img3.png);
+  }
+
+  .heading-primary-main {
+    font-weight: 600;
+    white-space: normal;
+    /* letter-spacing: 2.8rem; */
+    animation: moveInLeft 1.5s ease-out;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading-primary-main {
+    font-size: 4rem;
+  }
+
+  .heading-primary-sub {
+    font-size: 1rem;
+  }
 }
