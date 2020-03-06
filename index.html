@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates:400,600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/d23941fe54.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/styles.css">
   <title>Freeda Moore</title>
 </head>
 
 <body class="container">
+
   <header class="header">
     <div class="heading-border-box-1">
     </div>
@@ -24,33 +27,82 @@
     </div>
   </header>
 
-  <div class="about__heading">
-    <h2 class="heading-secondary">About</h2>
-  </div>
-  <div class="about__content">
-    <p>Hi!</p>
-    <p>
-      I'm a front end developer based in Sydney, Australia.
-    </p>
-    <p>
-      I'm passionate about building beautiful responsive websites and learning new skills and technologies.
-    </p>
-    <p>
-      I also create Android apps using Flutter and code music in Sonic Pi.
-    </p>
-    <p>
-      <!-- Check out some of my work below. -->
-    </p>
-  </div>
-  <!-- <section class="projects">
-      <h2>Projects</h2>
-    </section>
-    <section class="contact">
-      <h2>Contact</h2>
+  <section class="about main-theme">
+    <div class="sub-heading-section">
+      <h2 class="heading-secondary border-color-dark">About</h2>
+    </div>
+    <div class="content-section">
+      <p>Hi!</p>
       <p>
-      if you want to get in touch, you can find me on LinkedIn
+        I'm a front end developer based in Sydney, Australia.
       </p>
-    </section> -->
+      <p>
+        I'm passionate about building beautiful responsive websites and learning new skills and technologies.
+      </p>
+      <p>
+        I also create Android apps using Flutter and code music in Sonic Pi.
+      </p>
+      <p>
+        Check out some of my work below.
+      </p>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="projects-header">
+      <h2 class="heading-secondary border-color-main">Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project">
+        <img src="images/proj-1.png" alt="Image of Cats website" class="project-img">
+        <h3 class="project-heading">
+          <span class="project-heading-main">Adopt a Kitten</span>
+          <span class="project-heading-sub">HTML / CSS</span>
+        </h3>
+        <div class="project-buttons">
+          <a href="https://freedamoore.github.io/AdvancedCSS/" class="btn" target="_blank">Live</a>
+          <a href="https://github.com/freedamoore/AdvancedCSS" class="btn" target="_blank">Code</a>
+        </div>
+      </div>
+      <div class="project">
+        <img src="images/proj-2.png" alt="Image of Foxy Styles website" class="project-img">
+        <h3 class="project-heading">
+          <span class="project-heading-main">Foxy CSS Styles</span>
+          <span class="project-heading-sub">HTML / CSS / JavaScript</span>
+        </h3>
+        <div class="project-buttons">
+          <a href="https://freedamoore.github.io/Foxy-CSS-Styles/" class="btn" target="_blank">Live</a>
+          <a href="https://github.com/freedamoore/Foxy-CSS-Styles" class="btn" target="_blank">Code</a>
+        </div>
+      </div>
+      <div class="project">
+        <img src="images/proj-3.png" alt="Image of Nasa API website" class="project-img">
+        <h3 class="project-heading">
+          <span class="project-heading-main">NASA APOD API</span>
+          <span class="project-heading-sub">HTML / CSS / JavaScript </span>
+        </h3>
+        <div class="project-buttons">
+          <a href="https://developer.frezam.com/nasa/index.html" class="btn" target="_blank">Live</a>
+          <a href="https://github.com/freedamoore/NASA-API-JavaScript" class="btn" target="_blank">Code</a>
+        </div>
+      </div>
+    </div>
+    <div class="projects-github">
+      <p>For more project examples, visit my github profile</p>
+      <a href="https://github.com/freedamoore" class="social social-git" target="_blank"><i class="fab fa-github-square"></i></a>
+    </div>
+  </section>
+
+  <section class="contact main-theme">
+    <div class="sub-heading-section">
+      <h2 class="heading-secondary border-color-dark">Contact</h2>
+    </div>
+    <div class="content-section contact-content">
+      <p>Want to get in touch? You can contact me via LinkedIn.</p>
+      <a href="https://www.linkedin.com/in/freeda-moore-389057196" class="social social-white" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
 
   <footer class=footer>
     <p id="copyright"></p>
