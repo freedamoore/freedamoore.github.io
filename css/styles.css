@@ -17,7 +17,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
- overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -276,10 +276,11 @@ body {
 
 .social {
   font-size: 5rem;
+  animation: clickMe 1.5s infinite;
 }
 
 .social:hover{
-  opacity: 0.7;
+  transform: translateY(-5px);
 }
 
 .social-git {
@@ -351,6 +352,20 @@ body {
 
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes clickMe {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
